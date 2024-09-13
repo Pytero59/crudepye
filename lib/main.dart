@@ -1,5 +1,7 @@
+import 'package:crudepye/provider/users.dart';
 import 'package:crudepye/views/user_list.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,8 +10,27 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-
   @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (ctx) => Users(),
+        )
+      ],
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home: const UserList(),
+      ),
+    );
+  }
+}
+
+  /*@override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
@@ -20,7 +41,7 @@ class MyApp extends StatelessWidget {
       ),
       home: UserList(),
     );}
-}
+
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -77,3 +98,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+*/
