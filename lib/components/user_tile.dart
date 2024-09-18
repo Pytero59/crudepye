@@ -1,6 +1,7 @@
 
 
 import 'package:crudepye/models/user.dart';
+import 'package:crudepye/route/app_routes.dart';
 import 'package:flutter/material.dart';
 
 class UserTile extends StatelessWidget {
@@ -27,9 +28,14 @@ class UserTile extends StatelessWidget {
           child: Row(
             children: <Widget>[
               IconButton(
-                onPressed: () {},
                 icon: const Icon(Icons.edit),
                 color: Colors.orange,
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.user_form,
+                    arguments: user,
+                  );
+                },
               ),
               IconButton(
                   onPressed: () {},

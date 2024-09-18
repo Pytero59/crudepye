@@ -6,7 +6,7 @@ Map DUMMY_USERS = {
     id: '1',
     name: 'Matheus',
     email: 'Ryzen 5 5600, gtx 1070, 16 ram',
-    avatarUrl: 'https://static.vecteezy.com/ti/vetor-gratis/p3/14300061-icone-de-glifo-de-perfil-de-homem-anonimo-foto-para-documentos-ilustracaoial-vetor.jpg'
+    avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0QDTCmuOgvF6AeahB5Klo9YKJEfaAIXc2Lg&s'
   ),
 
   '2': const User(

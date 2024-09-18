@@ -4,6 +4,7 @@ import 'package:crudepye/models/user.dart';*/
 import 'package:crudepye/provider/users.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:crudepye/route/app_routes.dart';
 
 class UserList extends StatelessWidget {
   const UserList({super.key});
@@ -16,7 +17,11 @@ class UserList extends StatelessWidget {
       appBar: AppBar(
        title: const Text('Lista de Computadores'),
         actions: <Widget>[
-          IconButton(onPressed: () {}, icon: const Icon(Icons.add))
+          IconButton(
+              onPressed: () {
+              Navigator.of(context).pushNamed(AppRoutes.user_form);
+    },
+              icon: const Icon(Icons.add))
         ],
       ),
     body: ListView.builder(
